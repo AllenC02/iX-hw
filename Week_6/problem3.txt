@@ -1,0 +1,1 @@
+Probably because lists are already stored to memory and iterators are generating. Meaning you can't use slice notation on something that is still generating.
