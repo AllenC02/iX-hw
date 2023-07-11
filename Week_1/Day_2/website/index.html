@@ -1,54 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tailwind demo</title>
-    <link href="https://cdn.tailwindcss.com/2.2.16/tailwind.min.css" rel="stylesheet">
-  </head>
-  <body class="bg-gray-900 text-white">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-800 text-white min-h-screen">
 
-    <div class="container mx-auto px-4 py-12 text-center">
-        <h1 class="text-4xl">Allen Chou</h1>
-        <div class="grid grid-cols-3 my-12">
-            <div></div>
-            <div>
-                <img src="IMG_6452.jpeg" class="mx-auto rounded-full h-48 w-48 object-cover" alt="...">
-            </div>
-            <div></div>
-        </div>
-        <p>Github: AllenCh02</p>
-        <div class="container mx-auto bg-white text-gray-900 my-12 py-4">
-            <h2 class="text-xl">About me: </h2>
-            <p>I am currently a rising senior at the University of California Irvine studying software engineering. I transferred from political science into software engineering last quarter. I love traveling, going out with my friends, and lifting. </p>
-        </div>
+  <div class="container mx-auto py-8">
+    <p class="text-5xl text-center py-4">Allen Chou</p>
+    <div class="flex justify-center">
+        <img src="IMG_6452.jpeg" alt="..." class="rounded-full mx-auto" height="100">
     </div>
+    <p class="text-center py-4">Github: AllenCh02</p>
 
-    <div class="container mx-auto px-4 py-4 text-center bg-gray-900 text-white">
-      <form class="form">
-        <div>
-          <label for="name" class="mr-2">Name:</label>
-          <input type="text" id="name" name="gender" class="px-2 py-1" required>
-        </div>
-
-        <div class="mt-4">
-          <span class="mr-2">Gender:</span>
-          <input type="radio" id="male" name="gender" value="male" class="mr-1">
-          <label for="male" class="mr-2">Male</label>
-          <input type="radio" id="female" name="gender" value="female" class="mr-1">
-          <label for="female">Female</label>
-        </div>
-
-        <div class="mt-4">
-          <input type="checkbox" id="subscribe" name="subscribe" value="yes" class="mr-1">
-          <label for="subscribe">Subscribe!</label>
-        </div>
-
-        <div class="mt-4">
-          <input type="submit" value="Submit" class="px-4 py-2 bg-blue-500 text-white rounded">
-        </div>
-      </form>
+    <div class="bg-white text-black text-center rounded my-4 p-4 mx-5">
+      <p>About me: </p>
+      <p>I am currently a rising senior at the University of California Irvine studying software engineering. I transferred from political science into software engineering last quarter. I love traveling, going out with my friends, and lifting.</p>
     </div>
+  </div>
 
-  </body>
+  <div class="bg-gray-800 text-white p-4">
+    <form class="grid grid-cols-1 gap-2 place-items-center mx-5">
+      <label for="name" class="text-white">Name:</label>
+      <input type="text" id="name" name="name" class="border p-1 rounded" required>
+
+      <div>
+        <label for="gender" class="text-white">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male" class="mr-2">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <label for="subscribe" class="text-white">Subscribe!</label>
+      </div>
+
+      <input type="submit" value="Submit" class="p-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+    </form>
+  </div>
+  
+</body>
 </html>
