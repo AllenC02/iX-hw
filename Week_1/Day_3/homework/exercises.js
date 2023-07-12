@@ -66,13 +66,65 @@ function returnVowels(string) {
 // console.log(returnVowels('aeiouacbauwdnacowqijnqwe'))
 
 function addTwoNum(num1, num2) {
-    result = num1 + num2;
+    let result = num1 + num2;
     return result;
 }
 // console.log(addTwoNum(3,19))
 
 function multTwoNum(num1, num2) {
-    result = num1 * num2;
+    let result = num1 * num2;
     return result;
 }
-console.log(multTwoNum(3,19))
+// console.log(multTwoNum(3,19))
+
+function returnPostal(city) {
+    const cityPostal = {
+        "Yorba Linda": "92886",
+        "Irvine": "92620",
+        "Beverly Hills": "90210",
+    };
+    const postal = cityPostal[city];
+    if (postal) {
+        return postal;
+    }
+}
+// console.log(returnPostal("Irvine"))
+
+function sortArrayAlph(array) {
+    let sorted = array.sort();
+    return sorted;
+}
+// console.log(sortArrayAlph(['c','b','a','d']))
+
+function sortASC(array) {
+    let sorted = array.sort((a,b) => a - b);
+    return sorted;
+}
+// console.log(sortASC([3,2,1]))
+
+function returnReverse(num) {
+    let reversed = num.toString().split('').reverse().join('')
+    let result = parseInt(reversed);
+    return result;
+}
+// console.log(returnReverse(92620))
+// THIS DOESN'T WORK BECAUSE 0 IS LOST AS A STRING !!!
+//2629
+
+function capitalizeAll(string) {
+    return string.toUpperCase();
+    
+}
+// console.log(capitalizeAll('abcde'))
+
+function returnOccurances(string, letter) {
+    let a = string.indexOf(letter)
+    let result = 0;
+    while (a != -1) {
+        result++;
+        a = string.indexOf(letter, a + 1);
+    }
+    return result;
+}
+// console.log(returnOccurances('abbc','b'))
+
