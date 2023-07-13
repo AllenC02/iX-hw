@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container my-5 ">
+      <div class="card p-4">
+        <div class="text-center">
+          <h1>Number Guesser</h1>
+          <h6> This is a small number guessing game. It will teach you about the DOM.</h6>
+          <hr />
+          <h7> guess a number between 0 and 10</h7>
+          <div class="input-group mb-3">
+            <span class="input-group-text"></span>
+            <input
+              id="guess-input"
+              type="number"
+              class="form-control"
+              placeholder="Enter your guess"
+            />
+          </div>
+          <div id="output"></div> <!-- This line was missing in your HTML -->
+          <button
+            onclick="guess()"
+            type="button"
+            class="btn btn-dark mt-1"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
