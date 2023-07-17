@@ -14,7 +14,7 @@ class Task {
     
       this.form.addEventListener('submit', (e) => this.onFormSubmit(e));
   
-      this.tasks = [];
+      this.tasks = this.loadTasksFromLocalStorage();
   
       this.renderTaskTable();
     }
@@ -28,6 +28,7 @@ class Task {
   
       const task = new Task(this.description.value);
       this.tasks.push(task);
+      this.saveTasksToLocalStorage();
       this.renderTaskTable();
   
       this.description.value = '';
@@ -77,6 +78,7 @@ class Task {
       completeButton.addEventListener('click', () => {
         task.completed = !task.completed;
         completeButton.checked =task.completed;
+        this.saveTasksToLocalStorage();
       });
 
       deleteButton.setAttribute('class', 'btn btn-sm me-1');
@@ -85,11 +87,20 @@ class Task {
         const row = deleteButton.closest('tr');
         const index = Array.from(row.parentNode.children).indexOf(row);
         this.tasks.splice(index, 1);
+        this.saveTasksToLocalStorage
         this.renderTaskTable();
       });
 
       return [completeButton, deleteButton];
-  
+    }
+
+    loadTasksFromLocalStorage() {
+      const tasks = JSON.parse(localStorage.getItem('tasks'));
+      return tasks ? tasks.map(task => new Task(task.description, task.completed)) : [];
+    }
+
+    saveTasksToLocalStorage() {
+      localStorage.setItem('tasks', JSON.stringify(this.tasks));
     }
 
 
