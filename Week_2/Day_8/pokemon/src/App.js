@@ -37,7 +37,7 @@ function App() {
           <div className="input-group"></div>
             <div className="input-group">
               <span className="input-group-text" id="basic-addon3">https://pokeapi.co/api/v2/pokemon/</span>
-              <input type="text" id="task-input" className="form-control" placeholder="ditto" value={input} onChange={inputChange} />
+              <input type="text" id="task-input" className="form-control" placeholder="pikachu" value={input} onChange={inputChange} />
               <div className="input-group-append">
                 <button className="btn btn-outline-dark btn-sm" type="submit" style={{ fontSize: '20px' }}>Look Up</button>
               </div>
@@ -60,7 +60,9 @@ function App() {
                 <td>{pokemon.weight}</td>
                 <td>
                   {pokemon.abilities.map((ability, index) => (
-                    <div key={index}>{ability.ability.name}</div>
+                    <div key={index}>
+                      {ability.ability.name}
+                    </div>
                   ))}
                 </td>
               </tr>
